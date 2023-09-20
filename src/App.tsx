@@ -1,5 +1,4 @@
 import { RouterProvider } from 'react-router-dom'
-import Navbar from './components/Header'
 import GlobalStyle from './styles/globalStyles'
 import router from './routes'
 

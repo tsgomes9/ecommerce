@@ -1,5 +1,3 @@
-import { Anchor } from '@phosphor-icons/react'
-
 export default function Home() {
   return (
     <>
