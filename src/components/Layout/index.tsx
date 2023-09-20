@@ -1,12 +1,12 @@
 import { Outlet } from 'react-router-dom'
 import Header from '../Header'
-// import { NavbarArea } from '../Navbar'
+import { NavbarArea } from '../NavbarArea'
 
 export default function Layout() {
   return (
     <>
       <Header />
-      {/* <NavbarArea /> */}
+      <NavbarArea />
       <Outlet />
     </>
   )
