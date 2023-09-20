@@ -1,13 +1,13 @@
-import Navbar from './components/navbar'
+import { RouterProvider } from 'react-router-dom'
+import Navbar from './components/Header'
 import GlobalStyle from './styles/globalStyles'
+import router from './routes'
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <Navbar />
-      <h1>Hello world!</h1>
-      <p>this is a marketplace</p>
+      <RouterProvider router={router} />
     </>
   )
 }
