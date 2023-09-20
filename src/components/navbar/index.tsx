@@ -13,7 +13,7 @@ import { NavItems } from './items'
 import Heart from '../../assets/Navbar/heart.svg'
 import ShoppingCart from '../../assets/Navbar/shopping-cart.svg'
 
-export default function Navbar() {
+export function NavbarArea() {
   return (
     <>
       <NavbarStyled>
