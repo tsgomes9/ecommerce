@@ -39,6 +39,9 @@ export const NavItemStyle = {
   margin: '0 20px',
   textDecoration: 'none',
   color: 'black',
+  '&:hover': {
+    borderBottom: '1px solid black',
+  },
 }
 
 export const NavItem = styled.div`
@@ -95,7 +98,6 @@ export const Sidebar = styled.div<ISidebar>`
   top: 0;
   padding: 1rem;
   height: 100vh;
-  border: 2px solid red;
   background-color: white;
   transition: width 0.5s ease;
   width: ${(props) => (props.isOpen ? '100vw' : '0')};
