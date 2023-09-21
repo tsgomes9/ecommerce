@@ -2,6 +2,7 @@ import { Link } from '@mui/material'
 import {
   CloseIcon,
   MenuIcon,
+  NavItem,
   NavItemStyle,
   NavbarActions,
   NavbarInput,
@@ -17,6 +18,7 @@ import Heart from '../../assets/Navbar/heart.svg'
 import ShoppingCart from '../../assets/Navbar/shopping-cart.svg'
 import Menu from '../../assets/Navbar/menu.svg'
 import { useState } from 'react'
+import Close from '../../assets/Navbar/close.svg'
 
 export function NavbarArea() {
   const [isOpen, setIsOpen] = useState(false)
@@ -44,9 +46,11 @@ export function NavbarArea() {
         </NavbarItems>
 
         <Sidebar isOpen={isOpen}>
-          <CloseIcon onClick={handleSidebar}>X</CloseIcon>
+          <CloseIcon onClick={handleSidebar}>
+            <img src={Close} />
+          </CloseIcon>
           {NavItems.map((item) => (
-            <div>
+            <NavItem>
               <Link
                 key={item.path}
                 component={LinkRouter}
@@ -56,7 +60,7 @@ export function NavbarArea() {
               >
                 {item.name}
               </Link>
-            </div>
+            </NavItem>
           ))}
         </Sidebar>
 

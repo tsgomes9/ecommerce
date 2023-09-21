@@ -41,6 +41,11 @@ export const NavItemStyle = {
   color: 'black',
 }
 
+export const NavItem = styled.div`
+  width: 100%;
+  height: 3rem;
+`
+
 export const NavbarSearch = styled.div`
   display: flex;
   justify-content: center;
@@ -73,6 +78,7 @@ export const NavbarInput = styled.input`
 export const MenuIcon = styled.div`
   display: none;
   margin-right: 5%;
+  cursor: pointer;
   @media screen and (max-width: 850px) {
     display: block;
   }
@@ -89,13 +95,11 @@ export const Sidebar = styled.div<ISidebar>`
   top: 0;
   padding: 1rem;
   height: 100vh;
-  width: 100vw;
   border: 2px solid red;
-  display: none;
   background-color: white;
-  @media screen and (max-width: 850px) {
-    display: ${(props) => (props.isOpen ? 'block' : 'none')};
-  }
+  transition: width 0.5s ease;
+  width: ${(props) => (props.isOpen ? '100vw' : '0')};
+  opacity: ${(props) => (props.isOpen ? 1 : 0)};
 `
 
 export const CloseIcon = styled.div`
