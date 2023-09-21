@@ -1,7 +1,18 @@
+import ItemsMenu from '../../components/ItemsMenu'
+import { MenuArea, MenuItems, PromoArea } from './style'
+import blackFriday from '../../assets/Home/blackFriday.jpg'
+
 export default function Home() {
   return (
     <>
-      <h1 style={{ textAlign: 'center' }}>Home Page</h1>
+      <MenuArea>
+        <MenuItems>
+          <ItemsMenu />
+        </MenuItems>
+        <PromoArea>
+          <img src={blackFriday} style={{ width: '100%' }} />
+        </PromoArea>
+      </MenuArea>
     </>
   )
 }

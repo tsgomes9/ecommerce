@@ -2,11 +2,15 @@ import styled from 'styled-components'
 
 export const NavbarStyled = styled.div`
   display: flex;
+  margin: auto;
   height: 30px;
-  width: 100%;
+  width: 90%;
   margin-top: 30px;
   padding-bottom: 10px;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #e1e1e1;
+  @media screen and (max-width: 850px) {
+    justify-content: center;
+  }
 `
 export const NavbarTitle = styled.div`
   display: flex;
@@ -16,6 +20,9 @@ export const NavbarTitle = styled.div`
   font-size: 24px;
   width: 20%;
   height: 30px;
+  @media screen and (max-width: 850px) {
+    display: none;
+  }
 `
 
 export const NavbarItems = styled.div`
@@ -24,6 +31,9 @@ export const NavbarItems = styled.div`
   align-items: center;
   height: 30px;
   width: 50%;
+  @media screen and (max-width: 850px) {
+    display: none;
+  }
 `
 export const NavItemStyle = {
   margin: '0 20px',
@@ -37,6 +47,13 @@ export const NavbarSearch = styled.div`
   align-items: center;
   height: 30px;
   width: 15%;
+  @media screen and (max-width: 850px) {
+    width: 75%;
+  }
+  @media screen and (max-width: 767px) {
+    width: 70%;
+    margin-right: 5%;
+  }
 `
 
 export const NavbarActions = styled.div`
@@ -52,4 +69,11 @@ export const NavbarInput = styled.input`
   width: 100%;
   border: none;
   padding: 5px 10px;
+`
+export const MenuIcon = styled.div`
+  display: none;
+  margin-right: 5%;
+  @media screen and (max-width: 850px) {
+    display: block;
+  }
 `
