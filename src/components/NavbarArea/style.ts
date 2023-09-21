@@ -77,3 +77,30 @@ export const MenuIcon = styled.div`
     display: block;
   }
 `
+
+interface ISidebar {
+  isOpen: boolean
+}
+
+export const Sidebar = styled.div<ISidebar>`
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  padding: 1rem;
+  height: 100vh;
+  width: 100vw;
+  border: 2px solid red;
+  display: none;
+  background-color: white;
+  @media screen and (max-width: 850px) {
+    display: ${(props) => (props.isOpen ? 'block' : 'none')};
+  }
+`
+
+export const CloseIcon = styled.div`
+  text-align: center;
+  width: 10%;
+  margin-left: auto;
+  cursor: pointer;
+`
