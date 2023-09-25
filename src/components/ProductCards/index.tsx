@@ -1,6 +1,15 @@
 import axios from 'axios'
 import { useQuery } from 'react-query'
-import { ProductCardItem, ProductCardsContainer, TitleArea } from './style'
+import {
+  PriceContainer,
+  ProductCardItem,
+  ProductCardsContainer,
+  ProductName,
+  ProductOriginalPrice,
+  ProductPrice,
+  Title,
+  TitleArea,
+} from './style'
 import { useRef } from 'react'
 import leftArrow from '../../assets/FlashSales/leftArrow.svg'
 import rightArrow from '../../assets/FlashSales/rightArrow.svg'
@@ -25,7 +34,7 @@ export default function ProductCards() {
   return (
     <>
       <TitleArea>
-        <h1>Flash Sales</h1>
+        <Title>Flash Sales</Title>
         <div>
           <img
             src={leftArrow}
@@ -48,10 +57,13 @@ export default function ProductCards() {
                   <img src={item.image} style={{ width: '100%' }} />
                 </div>
 
-                <p>{item.name}</p>
-                <p>R$ {item.original_price}</p>
-
-                <p>{item.stars} stars</p>
+                <ProductName>{item.name}</ProductName>
+                <PriceContainer>
+                  <ProductPrice>R$ {item.promotional_price}</ProductPrice>
+                  <ProductOriginalPrice>
+                    R$ {item.original_price}
+                  </ProductOriginalPrice>
+                </PriceContainer>
               </ProductCardItem>
             ),
         )}
