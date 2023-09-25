@@ -96,17 +96,19 @@ export const Sidebar = styled.div<ISidebar>`
   flex-direction: column;
   position: absolute;
   top: 0;
+  left: 0;
   padding: 1rem;
   height: 100vh;
   background-color: white;
   transition: width 0.5s ease;
-  width: ${(props) => (props.isOpen ? '100vw' : '0')};
-  opacity: ${(props) => (props.isOpen ? 1 : 0)};
+  width: ${(props: any) => (props.isOpen ? '100vw' : '0')};
+  opacity: ${(props: any) => (props.isOpen ? 1 : 0)};
 `
 
 export const CloseIcon = styled.div`
   text-align: center;
   width: 10%;
   margin-left: auto;
+  margin-right: 20px;
   cursor: pointer;
 `

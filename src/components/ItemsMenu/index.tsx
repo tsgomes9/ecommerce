@@ -4,7 +4,7 @@ export default function ItemsMenu() {
   return (
     <>
       {menuList.map((item) => (
-        <div>
+        <div key={item.name}>
           <p>{item.name}</p>
         </div>
       ))}

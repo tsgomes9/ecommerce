@@ -1,18 +1,35 @@
 import ItemsMenu from '../../components/ItemsMenu'
-import { MenuArea, MenuItems, PromoArea } from './style'
+import {
+  Container,
+  MenuArea,
+  MenuItems,
+  PromoArea,
+  TopicArea,
+  TopicDiv,
+} from './style'
 import blackFriday from '../../assets/Home/blackFriday.jpg'
+import ProductCards from '../../components/ProductCards'
 
 export default function Home() {
   return (
     <>
-      <MenuArea>
-        <MenuItems>
-          <ItemsMenu />
-        </MenuItems>
-        <PromoArea>
-          <img src={blackFriday} style={{ width: '100%' }} />
-        </PromoArea>
-      </MenuArea>
+      <Container>
+        <MenuArea>
+          <MenuItems>
+            <ItemsMenu />
+          </MenuItems>
+          <PromoArea>
+            <img src={blackFriday} style={{ width: '100%' }} />
+          </PromoArea>
+        </MenuArea>
+
+        <TopicArea>
+          <TopicDiv />
+          Today's
+        </TopicArea>
+
+        <ProductCards />
+      </Container>
     </>
   )
 }
