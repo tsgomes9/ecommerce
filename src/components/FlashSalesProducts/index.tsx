@@ -1,20 +1,19 @@
 import axios from 'axios'
 import { useQuery } from 'react-query'
 import {
+  ButtonArea,
+  ButtonShowAll,
   PriceContainer,
   ProductCardItem,
   ProductCardsContainer,
   ProductName,
   ProductOriginalPrice,
   ProductPrice,
-  Title,
-  TitleArea,
 } from './style'
 import { useRef } from 'react'
-import leftArrow from '../../assets/FlashSales/leftArrow.svg'
-import rightArrow from '../../assets/FlashSales/rightArrow.svg'
+import TitleArea from '../TitleArea'
 
-export default function ProductCards() {
+export default function FlashSalesProducts() {
   const { data } = useQuery('productsData', () =>
     axios
       .get('https://prolevel.up.railway.app/product')
@@ -33,28 +32,19 @@ export default function ProductCards() {
 
   return (
     <>
-      <TitleArea>
-        <Title>Flash Sales</Title>
-        <div>
-          <img
-            src={leftArrow}
-            onClick={handleLeftClick}
-            style={{ cursor: 'pointer' }}
-          />
-          <img
-            src={rightArrow}
-            onClick={handleRightClick}
-            style={{ cursor: 'pointer' }}
-          />
-        </div>
-      </TitleArea>
+      <TitleArea
+        title={'Flash Sales'}
+        handleLeftClick={handleLeftClick}
+        handleRightClick={handleRightClick}
+      />
+
       <ProductCardsContainer ref={carousel}>
         {data?.map(
           (item: any) =>
             item.flash_sales && (
               <ProductCardItem key={item.id}>
                 <div style={{ border: '1px solid grey' }}>
-                  <img src={item.image} style={{ width: '100%' }} />
+                  <img src={item.image} style={{ width: '80%' }} />
                 </div>
 
                 <ProductName>{item.name}</ProductName>
@@ -68,6 +58,10 @@ export default function ProductCards() {
             ),
         )}
       </ProductCardsContainer>
+
+      <ButtonArea>
+        <ButtonShowAll>View All Products</ButtonShowAll>
+      </ButtonArea>
     </>
   )
 }

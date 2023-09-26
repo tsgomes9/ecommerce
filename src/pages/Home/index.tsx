@@ -8,7 +8,9 @@ import {
   TopicDiv,
 } from './style'
 import blackFriday from '../../assets/Home/blackFriday.jpg'
-import ProductCards from '../../components/ProductCards'
+import FlashSalesProducts from '../../components/FlashSalesProducts'
+import CategoriesArea from '../../components/Categories'
+import { Divider } from '@mui/material'
 
 export default function Home() {
   return (
@@ -28,7 +30,16 @@ export default function Home() {
           Today's
         </TopicArea>
 
-        <ProductCards />
+        <FlashSalesProducts />
+
+        <Divider sx={{ m: 4 }} />
+
+        <TopicArea>
+          <TopicDiv />
+          Categories
+        </TopicArea>
+
+        <CategoriesArea />
       </Container>
     </>
   )

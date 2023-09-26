@@ -15,6 +15,7 @@ export const MenuArea = styled.div`
   }
   @media screen and (max-width: 850px) {
     height: 20rem;
+    width: 100%;
   }
   @media screen and (max-width: 750px) {
     height: 18rem;
@@ -44,7 +45,6 @@ export const PromoArea = styled.div`
   padding: 2rem 1rem;
   display: flex;
   align-items: center;
-  height: 25rem;
   width: 70%;
   text-align: center;
 
