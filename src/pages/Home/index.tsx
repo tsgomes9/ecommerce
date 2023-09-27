@@ -8,8 +8,8 @@ import {
   TopicDiv,
 } from './style'
 import blackFriday from '../../assets/Home/blackFriday.jpg'
-import FlashSalesProducts from '../../components/FlashSalesProducts'
-import CategoriesArea from '../../components/Categories'
+import FlashSalesProducts from './components/FlashSalesProducts'
+import CategoriesArea from './components/Categories'
 import { Divider } from '@mui/material'
 
 export default function Home() {

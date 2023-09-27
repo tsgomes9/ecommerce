@@ -15,7 +15,6 @@ export const MenuArea = styled.div`
   }
   @media screen and (max-width: 850px) {
     height: 20rem;
-    width: 100%;
   }
   @media screen and (max-width: 750px) {
     height: 18rem;
@@ -42,7 +41,8 @@ export const MenuItems = styled.div`
 `
 
 export const PromoArea = styled.div`
-  padding: 2rem 1rem;
+  padding: 2rem 0;
+  /* height: 100%; */
   display: flex;
   align-items: center;
   width: 70%;
@@ -59,7 +59,7 @@ export const TopicArea = styled.div`
   align-items: center;
   gap: 15px;
   margin: 5% auto 0;
-  color: red;
+  color: ${(props: any) => props.theme.red1};
   font-size: 14px;
   font-weight: bold;
   @media screen and (max-width: 1000px) {
@@ -70,6 +70,6 @@ export const TopicArea = styled.div`
 export const TopicDiv = styled.div`
   width: 20px;
   height: 2rem;
-  background-color: red;
+  background-color: ${(props: any) => props.theme.red1};
   border-radius: 5px;
 `

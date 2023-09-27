@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-import TitleArea from '../TitleArea'
+import TitleArea from '../../../../components/TitleArea'
 import { categories } from './CategoriesList'
 import { CategorieItem, CategoriesContainer } from './style'
 

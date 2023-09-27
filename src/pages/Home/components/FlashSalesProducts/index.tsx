@@ -1,17 +1,10 @@
 import axios from 'axios'
 import { useQuery } from 'react-query'
-import {
-  ButtonArea,
-  ButtonShowAll,
-  PriceContainer,
-  ProductCardItem,
-  ProductCardsContainer,
-  ProductName,
-  ProductOriginalPrice,
-  ProductPrice,
-} from './style'
+import { ButtonArea, ButtonShowAll, ProductCardsContainer } from './style'
 import { useRef } from 'react'
-import TitleArea from '../TitleArea'
+import TitleArea from '../../../../components/TitleArea'
+import ProductCard from '../../../../components/ProductCard'
+import { IProductCard } from '../../../../components/ProductCard/types'
 
 export default function FlashSalesProducts() {
   const { data } = useQuery('productsData', () =>
@@ -40,21 +33,17 @@ export default function FlashSalesProducts() {
 
       <ProductCardsContainer ref={carousel}>
         {data?.map(
-          (item: any) =>
+          (item: IProductCard) =>
             item.flash_sales && (
-              <ProductCardItem key={item.id}>
-                <div style={{ border: '1px solid grey' }}>
-                  <img src={item.image} style={{ width: '80%' }} />
-                </div>
-
-                <ProductName>{item.name}</ProductName>
-                <PriceContainer>
-                  <ProductPrice>R$ {item.promotional_price}</ProductPrice>
-                  <ProductOriginalPrice>
-                    R$ {item.original_price}
-                  </ProductOriginalPrice>
-                </PriceContainer>
-              </ProductCardItem>
+              <ProductCard
+                key={item.id}
+                id={item.id}
+                image={item.image}
+                name={item.name}
+                promotional_price={item.promotional_price}
+                original_price={item.original_price}
+                flash_sales={item.flash_sales}
+              />
             ),
         )}
       </ProductCardsContainer>

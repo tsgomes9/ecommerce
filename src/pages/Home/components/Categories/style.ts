@@ -21,6 +21,7 @@ interface ICategoriesItem {
 export const CategorieItem = styled.div<ICategoriesItem>`
   flex-shrink: 0;
   border: 2px solid #e3e3e3;
+  border-radius: 5px;
   width: 15%;
   padding: 1rem;
   margin-right: 1rem;
@@ -31,7 +32,8 @@ export const CategorieItem = styled.div<ICategoriesItem>`
   align-items: center;
   flex-direction: column;
 
-  background-color: ${(props: any) => (props.active ? 'red' : 'white')};
+  background-color: ${(props: any) =>
+    props.active ? props.theme.red1 : 'white'};
   color: ${(props: any) => (props.active ? 'white' : 'black')};
 
   @media screen and (max-width: 1200px) {
