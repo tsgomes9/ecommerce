@@ -1,6 +1,6 @@
 export const NavItems = [
   {
-    path: '/home',
+    path: '/',
     name: 'Home',
   },
   {

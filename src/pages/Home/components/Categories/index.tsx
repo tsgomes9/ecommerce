@@ -33,7 +33,7 @@ export default function CategoriesArea() {
             active={activeItem === item.id}
           >
             <i className={item.class} style={{ fontSize: '48px' }}></i>
-            <p>{item.name}</p>
+            <p style={{ fontSize: '14px' }}>{item.name}</p>
           </CategorieItem>
         ))}
       </CategoriesContainer>
