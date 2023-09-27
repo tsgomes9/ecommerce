@@ -42,7 +42,7 @@ export const MenuItems = styled.div`
 
 export const PromoArea = styled.div`
   padding: 2rem 0;
-  /* height: 100%; */
+  height: 100%;
   display: flex;
   align-items: center;
   width: 70%;
