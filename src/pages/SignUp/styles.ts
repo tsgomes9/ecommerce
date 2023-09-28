@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Button from '@mui/material'
 
 export const Container = styled.div`
   width: 80%;
@@ -23,6 +24,10 @@ export const LoginFormContainer = styled.div`
   justify-content: center;
   text-align: center;
   gap: 0;
+  @media screen and (max-width: 850px) {
+    width: 100%;
+    margin: auto;
+  }
 `
 export const FormSignUp = styled.form`
   display: flex;

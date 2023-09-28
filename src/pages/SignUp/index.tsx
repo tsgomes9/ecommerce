@@ -24,7 +24,11 @@ export default function SignUp() {
             type="password"
             variant="standard"
           />
-          <Button variant="contained" size="large">
+          <Button
+            variant="contained"
+            size="large"
+            sx={{ backgroundColor: '#db4444', mt: 4 }}
+          >
             Create Account
           </Button>
         </FormSignUp>
